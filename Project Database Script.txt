@@ -1,0 +1,108 @@
+
+===============================
+	DATABASE SCHEMA
+===============================
+
+
+
+drop table customers;
+drop table dealers;
+drop table orders;
+drop table order_item_quantity;
+drop table warehouse;
+drop table managers;
+drop table items;
+drop table factory;
+drop table inbox;
+drop table orders;
+
+
+create table customers( 
+customerId varchar2(30) PRIMARY key,
+emailId varchar2(30) UNIQUE,
+password varchar2(20) not null,
+location varchar2(30),
+contactNumber varchar2(10),
+name varchar2(40));
+
+create table dealers( 
+dealerId varchar2(30) PRIMARY key,
+emailId varchar2(30) UNIQUE,
+password varchar2(20) not null,
+location varchar2(30),
+contactNumber varchar2(10),
+name varchar2(40),
+rating number);
+
+create table warehouse(
+warehouseId varchar2(30) PRIMARY key,
+managerId varchar2(30)REFERENCES managers(managerId)
+);
+
+create table warehouse_items(
+itemId varchar2(30) REFERENCES items(itemId),
+warehouseId varchar2(30) REFERENCES warehouse(warehouseId),
+quantity number
+);
+
+create table managers(
+managerId varchar2(30) PRIMARY key,
+name varchar2(30),
+password varchar2(30) not null,
+managerType varchar2(30));
+
+
+create table items(
+itemId varchar2(30) PRIMARY key,
+name VARCHAR2(30),
+price number(8,2));
+
+create table factory(
+factoryId varchar2(30) primary key,
+managerId VARCHAR2(30)REFERENCES managers(managerId)
+);
+
+create table factory_items(
+factoryId varchar2(30) REFERENCES factory(factoryId),
+itemId varchar2(30)REFERENCES items(itemId),
+quantity number
+);
+
+create table inbox(
+messageId varchar2(30) PRIMARY key,
+massage varchar2(100),
+inbox_user_id varchar2(30));
+
+create table orders(
+orderId varchar2(30) primary key,
+cost number,
+dealerId varchar2(30)references dealers(dealerId));
+
+create table order_item_quantity(
+orderId varchar2(30)references orders(orderId),
+itemId varchar2(30)references items(itemId),
+quantity number);
+
+select*from CUSTOMERS;
+select*from factory_items;
+select*from warehouse_items;
+select*from dealers;
+select*from items;
+select*from managers;
+select*from warehouse;
+select*from factory;
+select*from inbox;
+select*from orders;
+select*from order_item_quantity;
+
+desc customers;
+desc dealers;
+desc items;
+desc managers;
+desc warehouse;
+desc factory;
+desc inbox;
+desc factory_items;
+desc warehouse_items;
+desc orders;
+desc order_item_quantity;
