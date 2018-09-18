@@ -5,6 +5,7 @@
 
 
 
+
 drop table customers;
 drop table dealers;
 drop table orders;
@@ -15,6 +16,7 @@ drop table items;
 drop table factory;
 drop table inbox;
 drop table orders;
+drop table warehouse_location_coverage;
 
 
 create table customers( 
@@ -83,6 +85,11 @@ orderId varchar2(30)references orders(orderId),
 itemId varchar2(30)references items(itemId),
 quantity number);
 
+create table warehouse_location_coverage(
+warehouseId varchar2(30) references warehouse(warehouseId),
+coveredArea varchar2(30)
+);
+
 select*from CUSTOMERS;
 select*from factory_items;
 select*from warehouse_items;
@@ -94,6 +101,7 @@ select*from factory;
 select*from inbox;
 select*from orders;
 select*from order_item_quantity;
+select*from warehouse_location_coverage;
 
 desc customers;
 desc dealers;
@@ -106,3 +114,4 @@ desc factory_items;
 desc warehouse_items;
 desc orders;
 desc order_item_quantity;
+desc warehouse_location_coverage;
