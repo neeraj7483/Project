@@ -115,3 +115,18 @@ desc warehouse_items;
 desc orders;
 desc order_item_quantity;
 desc warehouse_location_coverage;
+
+
+insert into Items values('I100','bonnet',1000);
+insert into Items values('I101','bumper',800);
+insert into Items values('I102','grille',1500);
+insert into Items values('I103','rims',600);
+insert into Items values('I104','breake',450);
+commit;
+insert into Items values('I105','chain cover',567);
+insert into Items values('I106','bike engine',1600);
+insert into Items values('I107','wheel',900);
+insert into Items values('I108','head light',870);
+insert into Items values('I109','mudgaurd',560);
+commit;
+select * from items;
