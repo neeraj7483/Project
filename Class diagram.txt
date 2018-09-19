@@ -52,7 +52,7 @@ NIL
 
 ***************************
 
-4.USER_OPERATIONS
+4.CUSTOMER_OPERATIONS
 
 Data Member:-
 --------------------
@@ -63,4 +63,66 @@ Member Functions:-
 a.login()
 b.register()
 c.placeOrder()
-d.
+d.viewBill()
+e.viewMessages()
+f.viewItems()
+--------------------
+
+5.DEALER_OPERATIONS
+
+Data Member:-
+---------------------
+NIL
+---------------------
+Member Functions:-
+---------------------
+a.viewMessage()
+b.supply()
+c.reply()
+d.requestToWarehouseManager()
+e.viewOwnStock()
+---------------------
+
+6.WAREHOUSE_MANAGER_OPERATIONS
+
+Data Members:-
+---------------------
+NIL
+---------------------
+Member Functions:-
+---------------------
+a.viewMessage()
+b.reply()
+c.requestToFactoryManager()
+d.viewOwnStock()
+e.supply()
+f.billing()
+------------------------
+
+7.FACTORY_MANAGER_OPERATIONS
+
+Data Members:-
+------------------------
+NIL
+------------------------
+Member Functions:-
+------------------------
+a.viewRequest()
+b.supply()
+c.produce()
+d.viewOwnStock()
+------------------------
+
+8.HEAD_MANAGER_OPERATIONS
+
+Data Members:-
+------------------------
+NIL
+------------------------
+Member Functions:-
+------------------------
+a.viewWarehouseData()
+b.viewDealerData()
+c.viewCustomerData()
+d.viewFactoryData()
+------------------------
