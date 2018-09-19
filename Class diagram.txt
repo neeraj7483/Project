@@ -12,6 +12,7 @@ c.EmailId	-String
 d.location	-String
 e.Name		-String
 f.ContactNumber	-String
+g.address 	-Address
 -----------------------
 Member Function:-
 ---------------------
