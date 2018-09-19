@@ -1,0 +1,67 @@
+	INTRODUCTION 
+
+Auto Ancillaries Limited (AAL) is in the business of manufacturing important ancillaries for the two-wheeler and four-wheeler automobile industry. 
+For the past few months they have been facing problems with their current system. 
+Due to the problems they have felt the need for a change in their system. For this purpose, they have approached you to develop products. 
+They would like you to study the problem at hand and evolve a strategy for solving the current problems.
+In addition to this, they also want you to suggest solutions using which the company will get an added competitive edge in this cut-throat competitive market.
+
+
+
+	EXISTING SCENARIO
+
+AAL has an annual turnover of $ 15 million. The company has 4 factories and 4 warehouses.
+The company reaches to the customer through dealers. 
+
+The flow chain  for User is : 
+
+-> User can login using customer id and password.
+-> User can register in one of the following role : 
+	<Update User deatils>
+   (i) Customer
+   (ii) Dealer
+   
+   case 1 : [(whole:Harshvardhan), use usebean , error page] JDBC 
+   
+   
+   CUSTOMER
+   
+-> User logged in as Customer can view items,view bills,view messages.
+-> Customer can place the order for a particular item or set of items.  (from database)
+-> According to the location of Customer a list of dealers appears with rating and user can choose amongst the dealers
+	(The dealer which does not have item requested by Customer in stock will Supply the order but will take more time to do so)
+-> After order completion Customer will get a invoice of the order and will rate the dealer.
+-> feedback (pending)
+
+
+	DEALER
+
+1 Dealer can view his own stock of items.
+2 User logged in as Dealer can view request of orders came from Customer.
+3 If Dealer have the requested quantity of items he/she will supply the items.
+4 If Dealer does not have the requested quantity of items ,Dealer will request the WarehouseManager for the items.
+   At the same time Dealer will write a reply to Customer that delivery will be delayed and Customer will get the order on Date specify by the Dealer.
+5 Dealer can view history items sold by him/her.
+
+
+	WarehouseManager
+
+-> WarehouseManager can view his stock.
+-> If WarehouseManager have the requested quantity of items he/she will supply the items.
+-> If WarehouseManager does not have the requested quantity of items ,WarehouseManager will request the FactoryManager for the items.
+   At the same time WarehouseManager will write a reply to Dealer that delivery will be delayed and Dealer will get the order on Date specify by the WarehouseManager.
+-> WarehouseManager can view history items sold by him/her.
+
+	FactoryManager
+	
+-> FactoryManager can view his stock.
+-> If FactoryManager have the requested quantity of items he/she will supply the items.
+-> If FactoryManager does not have the requested quantity of items ,FactoryManager will order the factory to produce the items and then supply the items.
+-> WarehouseManager can view history items sold by him/her.
+
+	HeadManager
+	
+-> HeadManager can view Warehouse details.
+-> HeadManager can view Factory details.
+-> HeadManager can view Customer details.
+-> HeadManager can view Dealer details.
