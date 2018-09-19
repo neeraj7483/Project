@@ -1,0 +1,54 @@
+============================
+	CLASS DIAGRAM
+============================
+
+1.CUSTOMER
+
+Data Member:-
+-----------------------
+a.Customer ID 	-String
+b.Password	-String
+c.EmailId	-String
+d.location	-String
+e.Name		-String
+f.ContactNumber	-String
+-----------------------
+Member Function:-
+---------------------
+a.login()
+b.register()
+c.placeOrder()
+d.viewBill()
+e.viewMessages()
+f.viewItem()
+
+**************************
+
+2.DEALERS
+
+Data Member:-
+-----------------------
+a.dealerId	-String
+b.emailId	-String
+c.password	-String
+d.location	-String
+e.contactNumber	-String
+f.name		-String
+g.rating	-Integer
+-----------------------
+Member Function:-
+-----------------------
+a.viewMessages
+b.supply()
+c.reply()
+d.request()
+e.viewStock()
+
+**************************
+
+3.MANAGER
+
+Data Members:-
+-------------------
+a.managerId	-String
+b.name		-String
