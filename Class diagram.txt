@@ -15,12 +15,7 @@ f.ContactNumber	-String
 -----------------------
 Member Function:-
 ---------------------
-a.login()
-b.register()
-c.placeOrder()
-d.viewBill()
-e.viewMessages()
-f.viewItem()
+NIL
 
 **************************
 
@@ -38,11 +33,7 @@ g.rating	-Integer
 -----------------------
 Member Function:-
 -----------------------
-a.viewMessages
-b.supply()
-c.reply()
-d.request()
-e.viewStock()
+NILL
 
 **************************
 
@@ -52,3 +43,24 @@ Data Members:-
 -------------------
 a.managerId	-String
 b.name		-String
+c.password 	-String
+d.managerType	-String
+-------------------
+Member Functions:-
+-------------------
+NIL
+
+***************************
+
+4.USER_OPERATIONS
+
+Data Member:-
+--------------------
+NIL
+--------------------
+Member Functions:-
+--------------------
+a.login()
+b.register()
+c.placeOrder()
+d.
