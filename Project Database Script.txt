@@ -130,3 +130,13 @@ insert into Items values('I108','head light',870);
 insert into Items values('I109','mudgaurd',560);
 commit;
 select * from items;
+
+#Changes 21-09-18
+
+alter table orders
+add (status number check (status in(0,1)));
+
+insert into dealers values('D100','d123@abc.com','abc','Noida','8989898967','Max',4);
+insert into dealers values('D101','d111@abc.com','abc','Noida','3459898967','Thor',5);
+commit;
+
